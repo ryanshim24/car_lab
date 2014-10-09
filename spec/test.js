@@ -113,8 +113,9 @@ describe('Car', function(){
     it('should remove passenger from the passengers array if car is on', function(){
       car1.start();
       car1.pick_up("Ryan");
+      car1.pick_up("David");
       car1.dropOff("Ryan");
-      expect(car1.passengers).to.eql([]);
+      expect(car1.passengers).to.eql(["David"]);
     });
 
     it('should leave passenger in the passengers array if car is off', function(){

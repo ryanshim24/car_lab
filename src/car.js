@@ -59,7 +59,8 @@ Car.prototype.pick_up = function(name) {
 
 Car.prototype.dropOff = function(name) {
   if(this.state === "on" && this.passengers.indexOf(name) > -1 ) {
-    this.passengers.splice(name);
+    var index = this.passengers.indexOf(name);
+    this.passengers.splice(index, 1);
   }else {
     console.log("Your car is off dummy");
   }
