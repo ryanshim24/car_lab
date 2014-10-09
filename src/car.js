@@ -44,7 +44,7 @@ Car.prototype.park = function () {
   if(this.state === "off") {
     console.log("parked!!");
   }else {
-    console.log("Your is on dummy");
+    console.log("Your car is on dummy");
   }
 };
 
